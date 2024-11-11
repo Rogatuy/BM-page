@@ -1,0 +1,74 @@
+<article class="rate-card @@cardClass" role="region" aria-labelledby="@@titleId">
+  <div class="rate-card__inner">
+    @@if(context.badgeText) {
+      <div class="rate-card__badge">
+        <span>@@badgeText</span>
+      </div>
+    }
+    @@if(context.timerId) {
+      <div class="rate-card__timer">
+        @@include('components/Chapters/Main/rate-card/elements/timer-card/timer-card.html', {'timerId': '@@timerId'})
+      </div>
+    }
+    <div class="rate-card__content">
+      <div class="rate-card__header">
+        <div class="rate-card__icon">
+          <i class="@@icon" aria-hidden="true"></i>
+        </div>
+        <div class="rate-card__header-text">
+          <p class="rate-card__title" id="@@titleId">@@title</p>
+          <span class="rate-card__subtitle">@@subtitle</span>
+        </div>
+      </div>
+      <div class="rate-card__body">
+        <div class="rate-card__body-top">
+          <div class="rate-card__price-block">
+            <p class="rate-card__price">@@price</p>
+            <p class="rate-card__description">
+              @@priceDescription
+            </p>
+          </div>
+          @@include('components/Shared/Buttons/default/button.html', {'text': 'Выбрать', 'btnClass': 'btn-choose-rate', 'ariaLabel': '@@buttonAriaLabel'})
+        </div>
+        @@if(context.garantyImage) {
+          <div class="rate-card__body-bottom">
+            <div class="rate-card__guarantee">
+              <picture>
+                <source
+                  srcset="@@garantyImage-laptop.png"
+                  type="image/png"
+                  media="(min-width: 1024px) and (max-width: 1439px)"
+                />
+                <source
+                  srcset="@@garantyImage-tablet.png"
+                  type="image/png"
+                  media="(min-width: 744px) and (max-width: 1023px)"
+                />
+                <source
+                  srcset="@@garantyImage-mobile.png"
+                  type="image/png"
+                  media="(min-width: 0px) and (max-width: 743px)"
+                />
+                <img
+                  src="@@garantyImage-desktop.png"
+                  alt="guarantee-background"
+                />
+              </picture>
+              <button class="rate-card__guarantee-btn" aria-label="Открыть описание гарантии"></button>
+              <div class="rate-card__tip tip">
+                <div class="tip__inner">
+                  <p class="tip__text">@@tipText</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+      <div class="rate-card__footer">
+        <ul class="rate-card__list">
+          @@loop('components/Chapters/Main/rate-card/elements/list-item/list-item.html', '@@listPath')
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>

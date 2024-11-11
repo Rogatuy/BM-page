@@ -1,0 +1,52 @@
+// *================================================================
+//? Transitions
+// *================================================================
+
+@mixin defaultTransition {
+  transition: all 0.2s linear;
+}
+
+// *================================================================
+//? Hovers
+// *================================================================
+
+//? Mobile disabled hover
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// *================================================================
+//? Media queries
+// *================================================================
+
+// 1439-1024
+@mixin media-large {
+  @media screen and (max-width: $lg) {
+    @content;
+  }
+}
+
+// 1023-744
+@mixin media-medium {
+  @media screen and (max-width: $md) {
+    @content;
+  }
+}
+
+// 743-0
+@mixin media-small {
+  @media screen and (max-width: $sm) {
+    @content;
+  }
+}
+
+// min width
+@mixin media-min {
+  @media screen and (max-width: $xs) {
+    @content;
+  }
+}

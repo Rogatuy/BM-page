@@ -1,0 +1,112 @@
+.rate-card {
+  // .rate-card__list-item
+
+  &__list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    gap: 4px;
+
+    @include media-small {
+      padding-left: 20px;
+    }
+
+    & span {
+      color: $black;
+      @include SF-r16;
+
+      @include media-large {
+        @include SF-r14;
+      }
+    }
+
+    & i {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      color: $green;
+
+      @include media-small {
+        top: 2px;
+        width: 16px;
+        height: 16px;
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+
+        @include media-small {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.banks {
+  position: relative;
+  width: 50px;
+  height: 22px;
+  z-index: 0;
+
+  // .banks__bank
+  &__bank {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid $white;
+    background-color: $light-gray;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+
+    &--vtb {
+      left: 0;
+      z-index: 1;
+
+      &::before {
+        background-image: url('../../assets/images/main/banks/vtb.png');
+      }
+    }
+
+    &--sber {
+      left: 13px;
+      z-index: 2;
+
+      &::before {
+        background-image: url('../../assets/images/main/banks/sber.png');
+      }
+    }
+
+    &--alpha {
+      left: 27px;
+      z-index: 3;
+
+      &::before {
+        background-image: url('../../assets/images/main/banks/alpha.png');
+      }
+    }
+  }
+}

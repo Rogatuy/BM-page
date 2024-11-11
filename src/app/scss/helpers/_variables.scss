@@ -1,0 +1,21 @@
+//? Основные цвета
+$white: #ffffff;
+$black: #0e0f11;
+$gray: #c3c8cf;
+$light-gray: #f3f7fb;
+$green: #28906f;
+$yellow: #e2b735;
+$red: #f24c41;
+$light-red: rgba(240, 87, 77, 0.2);
+
+//? По умолчанию
+$base_fz: 16px; //? Размер шрифта по умолчанию 16px
+$base_ff: 'SF-UI-Display-Regular', sans-serif; //? Шрифт по умолчанию
+$base_bg: $light-gray; //? Цвет фона по умолчанию
+$base_color: $black; //? Цвет текста по умолчанию
+
+//? Переменные семейств шрифтов
+$ff_SFb: 'SF-UI-Display-Bold', sans-serif;
+$ff_SFm: 'SF-UI-Display-Medium', sans-serif;
+$ff_SFr: 'SF-UI-Display-Regular', sans-serif;
+$ff_SFsb: 'SF-UI-Display-Semibold', sans-serif;

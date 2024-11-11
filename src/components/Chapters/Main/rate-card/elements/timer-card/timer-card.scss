@@ -1,0 +1,52 @@
+.timer-card {
+  // .timer-card__inner
+  &__inner {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    min-width: 98px;
+    padding: 6px 8px;
+    border-radius: 1000px;
+    background-color: $light-red;
+
+    @include media-small {
+      gap: 3px;
+      padding: 4px 5px;
+      min-width: 78px;
+    }
+  }
+
+  & i {
+    position: relative;
+    width: 16px;
+    height: 16px;
+
+    @include media-small {
+      width: 11px;
+      height: 11px;
+    }
+
+    &::before {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: $red;
+      font-size: 16px;
+
+      @include media-small {
+        font-size: 10px;
+      }
+    }
+  }
+
+  // .timer-card__value
+  &__value {
+    @include SF-sb14;
+    color: $red;
+
+    @include media-small {
+      @include SF-b12;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+//! ================================================================
+//! Настройки Контейнера
+/*
+  (i) Стили будут применяться ко
+  всем классам содержащим *__container
+  Например header__container, main__container и т.д.
+*/
+
+[class*='__container'] {
+  max-width: $container-max-width + $container-default-padding * 2;
+  margin: 0 auto;
+  padding: 0 $container-default-padding;
+
+  @include container(
+    (
+      //? 1439-1024
+      ($lg, 960, 32),
+      //? 1023-744
+      ($md, 680, 32),
+      //? 743-
+      ($sm, 100%, 16)
+    )
+  );
+}

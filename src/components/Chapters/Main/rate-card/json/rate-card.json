@@ -1,0 +1,41 @@
+[
+  {
+    "cardClass": "",
+    "icon": "icon-messages",
+    "title": "Консультация",
+    "subtitle": "Основные вопросы и направления",
+    "price": "Бесплатно",
+    "priceDescription": "В любое время",
+    "listPath": "./../../components/Chapters/Main/rate-card/json/consultation-rate-list.json",
+    "titleId": "rate-card-title-1",
+    "buttonAriaLabel": "Выбрать консультацию"
+  },
+  {
+    "cardClass": "rate-card--gold",
+    "badgeText": "Лучший тариф",
+    "icon": "icon-flash",
+    "title": "Базовый тариф",
+    "subtitle": "Основные вопросы и направления",
+    "price": "65 000 ₽",
+    "priceDescription": "Единоразовый платеж",
+    "listPath": "./../../components/Chapters/Main/rate-card/json/base-rate-list.json",
+    "garantyImage": "../../assets/images/main/rate-card-gold/guarantee-block/bg-guarantee",
+    "tipText": "Для Вашего спокойствия мы гарантируем возврат оплаты в случае отсутствия списания долгов после процедуры.",
+    "titleId": "rate-card-title-2",
+    "buttonAriaLabel": "Выбрать базовый тариф"
+  },
+  {
+    "cardClass": "",
+    "icon": "icon-discount",
+    "title": "Рассрочка",
+    "subtitle": "Основные вопросы и направления",
+    "price": "3880 ₽ / мес.",
+    "priceDescription": "На 24 месяца",
+    "listPath": "./../../components/Chapters/Main/rate-card/json/installment-rate-list.json",
+    "garantyImage": "../../assets/images/main/rate-card-installment/guarantee-block/bg-guarantee",
+    "tipText": "Для Вашего спокойствия мы гарантируем возврат оплаты в случае отсутствия списания долгов после процедуры.",
+    "timerId": "installment-timer",
+    "titleId": "rate-card-title-3",
+    "buttonAriaLabel": "Выбрать рассрочку"
+  }
+]

@@ -1,0 +1,79 @@
+.rates {
+  // .rates__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 48px 0;
+
+    @include media-large {
+      padding: 32px 0;
+    }
+
+    @include media-medium {
+      gap: 40px;
+    }
+
+    @include media-small {
+      padding: 24px 0;
+      gap: 32px;
+    }
+  }
+
+  // .rates__header
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+
+    @include media-large {
+      gap: 16px;
+    }
+
+    @include media-medium {
+      gap: 12px;
+    }
+
+    span {
+      @include SF-r16;
+      color: $gray;
+      text-transform: uppercase;
+
+      @include media-small {
+        @include SF-r14;
+      }
+    }
+
+    h2 {
+      @include SF-sb56;
+      color: $black;
+
+      @include media-large {
+        @include SF-sb48;
+      }
+
+      @include media-small {
+        @include SF-sb32;
+      }
+    }
+  }
+
+  // .rates__cards
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    @include media-medium {
+      flex-direction: column;
+      gap: 12px;
+
+      & > :first-child {
+        order: 1;
+      }
+    }
+  }
+}

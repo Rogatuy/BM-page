@@ -1,0 +1,35 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  width: 100%;
+  min-height: 64px;
+  border-radius: 16px;
+  @include SF-sb16;
+  color: $white;
+  background-color: $black;
+  @include defaultTransition;
+
+  @include hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  @include media-large {
+    min-height: 60px;
+    padding: 20px;
+  }
+
+  @include media-small {
+    min-height: 48px;
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    background-color: #333;
+    color: #aaa;
+    opacity: 0.5;
+  }
+}

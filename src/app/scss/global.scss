@@ -1,0 +1,98 @@
+@use 'sass:math';
+
+@import './imports.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: $base_fz;
+  font-family: $base_ff;
+  font-style: normal;
+  color: $base_color;
+  background: $base_bg;
+  overflow: auto;
+  backface-visibility: hidden;
+  line-height: 1;
+  -webkit-backface-visibility: hidden;
+  height: 100%;
+  min-width: $container-min-width;
+
+  @include media-min {
+    overflow-x: scroll;
+  }
+}
+
+// Оболочка wrapper
+.full-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+
+  // Прижимаем footer
+  > main {
+    flex: 1 1 auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  cursor: default; // сброс стандартного курсора при наведении на заголовок и текст
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+span {
+  display: inline-block;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+input,
+textarea {
+  outline: none;
+  border: transparent;
+  background: transparent;
+
+  &:focus,
+  :active {
+    outline: none;
+  }
+}
+
+button {
+  outline: none;
+  border: transparent;
+  background: transparent;
+  cursor: pointer;
+}

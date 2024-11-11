@@ -1,0 +1,9 @@
+//* Global Styles
+@import './../../../app/scss/global.scss';
+//? Common Components
+@import './../../../components/Chapters/Main/rate-card/rate-card.scss';
+//? Shared Components
+@import './../../../components/Shared/Buttons/default/button.scss';
+
+//? Sections
+@import '../sections/rates.scss';

@@ -1,0 +1,38 @@
+// *================================================================
+
+//? Размеры макета
+$max-width: 1440; // Ширина полотна (макета)
+$container-max-width: 1320; // Ширина ПК контейнера
+$container-min-width: 360px; // Минимальная ширина страницы
+
+//? Общий отступ у контейнера (Пример формулы расчёта ниже)
+$container-default-padding: 60px;
+
+// *================================================================
+
+// размер rem установлен в 16px по умолчанию от размера html элемента
+@function toRem($px) {
+  @return calc($px / 16) + rem;
+}
+
+// Расчёт ширины контейнера
+@mixin container($widths, $paddings: 20px) {
+  @each $item in $widths {
+    $breakpoint: nth($item, 1);
+    $containerWidth: nth($item, 2);
+    $padding: if(length($item) > 2, nth($item, 3), $paddings);
+
+    @if $containerWidth == 100% {
+      @media (max-width: $breakpoint) {
+        max-width: 100%;
+        padding: 0 ($padding + px);
+      }
+    } @else {
+      @media (max-width: $breakpoint) {
+        max-width: toRem($containerWidth + ($padding * 2));
+        padding: 0 ($padding + px);
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+// Bold
+@mixin SF-b40 {
+  font-family: $ff_SFb;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+@mixin SF-b32 {
+  font-family: $ff_SFb;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+}
+
+@mixin SF-b24 {
+  font-family: $ff_SFb;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+}
+
+@mixin SF-b12 {
+  font-family: $ff_SFb;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.4px;
+}
+
+// SemiBold
+@mixin SF-sb56 {
+  font-family: $ff_SFsb;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 56px;
+}
+
+@mixin SF-sb48 {
+  font-family: $ff_SFsb;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+@mixin SF-sb32 {
+  font-family: $ff_SFsb;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38.4px;
+}
+
+@mixin SF-sb24 {
+  font-family: $ff_SFsb;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+}
+
+@mixin SF-sb20 {
+  font-family: $ff_SFsb;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+@mixin SF-sb16 {
+  font-family: $ff_SFsb;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.2px;
+}
+
+@mixin SF-sb14 {
+  font-family: $ff_SFsb;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19.6px;
+}
+
+@mixin SF-sb12 {
+  font-family: $ff_SFsb;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14.4px;
+}
+
+// Medium
+@mixin SF-m14 {
+  font-family: $ff_SFr;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+}
+
+@mixin SF-m12 {
+  font-family: $ff_SFr;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.8px;
+}
+
+// Regular
+@mixin SF-r16 {
+  font-family: $ff_SFr;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+}
+
+@mixin SF-r14 {
+  font-family: $ff_SFr;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+}

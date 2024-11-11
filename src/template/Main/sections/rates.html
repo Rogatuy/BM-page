@@ -1,0 +1,16 @@
+<section id="rates" aria-labelledby="rates-title">
+  <div class="rates">
+    <div class="rates__container">
+      <div class="rates__inner">
+        <div class="rates__header">
+          <span>Выберите лучший</span>
+          <h2 id="rates-title">Актуальные тарифы</h2>
+        </div>
+        <div class="rates__cards">
+          @@loop('components/Chapters/Main/rate-card/rate-card.html',
+          './../../components/Chapters/Main/rate-card/json/rate-card.json')
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
